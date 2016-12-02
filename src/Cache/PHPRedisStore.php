@@ -8,7 +8,7 @@
 
 namespace Amlun\Cache;
 
-use Amlun\Ledis\Database;
+use Amlun\Ledis\DataBase;
 use Illuminate\Contracts\Cache\Store;
 
 class PHPRedisStore implements Store
@@ -40,7 +40,7 @@ class PHPRedisStore implements Store
      * @param string $prefix
      * @param string $connection
      */
-    public function __construct(Database $redis, $prefix = '', $connection = 'default')
+    public function __construct(DataBase $redis, $prefix = '', $connection = 'default')
     {
         $this->redis = $redis;
         $this->setPrefix($prefix);

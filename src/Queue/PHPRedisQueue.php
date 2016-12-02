@@ -8,7 +8,7 @@
 
 namespace Amlun\Ledis\Queue;
 
-use Amlun\Ledis\Database;
+use Amlun\Ledis\DataBase;
 use Illuminate\Queue\LuaScripts;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
@@ -53,7 +53,7 @@ class PHPRedisQueue extends Queue implements QueueContract
      * @param  string $connection
      * @param  int $expire
      */
-    public function __construct(Database $redis, $default = 'default', $connection = null, $expire = 60)
+    public function __construct(DataBase $redis, $default = 'default', $connection = null, $expire = 60)
     {
         $this->redis = $redis;
         $this->expire = $expire;

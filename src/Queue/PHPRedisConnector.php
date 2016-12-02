@@ -9,7 +9,7 @@
 namespace Amlun\Ledis\Queue;
 
 use Illuminate\Support\Arr;
-use Amlun\Ledis\Database;
+use Amlun\Ledis\DataBase;
 use Illuminate\Queue\Connectors\ConnectorInterface;
 
 class PHPRedisConnector implements ConnectorInterface
@@ -34,7 +34,7 @@ class PHPRedisConnector implements ConnectorInterface
      * @param  Database $redis
      * @param  string|null $connection
      */
-    public function __construct(Database $redis, $connection = null)
+    public function __construct(DataBase $redis, $connection = null)
     {
         $this->redis = $redis;
         $this->connection = $connection;
