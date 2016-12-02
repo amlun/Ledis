@@ -51,7 +51,7 @@ class PHPRedisConnector implements ConnectorInterface
         return new PHPRedisQueue(
             $this->redis, $config['queue'],
             Arr::get($config, 'connection', $this->connection),
-            Arr::get($config, 'retry_after', 60)
+            Arr::get($config, 'expire', 60)
         );
     }
 }
