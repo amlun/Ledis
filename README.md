@@ -2,7 +2,7 @@
 
 PHPRedis For Laravel / Lumen
 
-Most Likely:
+Similar to:
     
 ```
 Illuminate\Cache\RedisStore
@@ -11,8 +11,13 @@ Illuminate\Queue\Jobs\RedisJob
 Illuminate\Queue\Connectors\RedisConnector
 ```
 
-# Laravel
-# Lumen
+# Usage
+
+`composer require amlun/ledis`
+
+
+# Use in Laravel
+# Use in Lumen
 
 Add in bootstrap/app.php 
 
