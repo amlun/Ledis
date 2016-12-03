@@ -1,7 +1,7 @@
 {
-  "name": "amlun/Ledis",
+  "name": "amlun/ledis",
   "description": "PHPRedis For Laravel",
-  "minimum-stability": "stable",
+  "minimum-stability": "dev",
   "license": "MIT",
   "type": "library",
   "require": {
