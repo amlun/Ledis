@@ -1,8 +1,10 @@
 # Ledis
 
-PHPRedis For Laravel / Lumen
+Ledis is a redis driver for Laravel or Lumen,it works with PhpRedis(the PECL Redis Extension).
 
-Similar to:
+Now it supports redis database, cache and queue.
+
+You can find that Ledis is Similar to:
     
 ```
 Illuminate\Redis\Database
