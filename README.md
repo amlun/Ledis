@@ -5,6 +5,7 @@ PHPRedis For Laravel / Lumen
 Similar to:
     
 ```
+Illuminate\Redis\Database
 Illuminate\Cache\RedisStore
 Illuminate\Queue\RedisQueue
 Illuminate\Queue\Jobs\RedisJob

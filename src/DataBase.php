@@ -32,9 +32,10 @@ class DataBase
     public function __construct(array $servers = [])
     {
         Arr::forget($servers, 'cluster');
-        Arr::forget($servers, 'options');
-        $this->clients = $this->createClient($servers);
-        $this->database = $this->saveDatabases($servers);
+        $options = array_merge(['timeout' => 10.0], (array)Arr::pull($servers, 'options'));
+        if (true) {
+            $this->clients = $this->createSingleClients($servers, $options);
+        }
     }
 
     /**
@@ -57,21 +58,22 @@ class DataBase
      *
      *
      * @param array $servers
+     * @param array $options
      * @return array
      */
-    protected function createClient(array $servers)
+    protected function createSingleClients(array $servers, array $options = [])
     {
-        ini_set('default_socket_timeout', -1);
         $clients = [];
         foreach ($servers AS $key => $server) {
             $redis = new \Redis();
-            $redis->pconnect($server['host'], $server['port'], 10.0);
+            $redis->connect($server['host'], $server['port'], $options['timeout']);
             if (!empty($server['password'])) {
                 $redis->auth($server['password']);
             }
             if (!empty($server['database'])) {
                 $redis->select($server['database']);
             }
+
             $clients[$key] = $redis;
         }
         return $clients;
