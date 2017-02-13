@@ -10,6 +10,7 @@ namespace Amlun\Ledis\Providers;
 
 use Amlun\Ledis\Queue\PHPRedisConnector;
 use Illuminate\Support\ServiceProvider;
+use Queue;
 
 class QueueServiceProvider extends ServiceProvider
 {

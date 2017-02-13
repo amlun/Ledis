@@ -9,8 +9,9 @@
 
 namespace Amlun\Ledis\Providers;
 
-use Amlun\Cache\PHPRedisStore;
+use Amlun\Ledis\Cache\PHPRedisStore;
 use Illuminate\Support\ServiceProvider;
+use Cache;
 
 class CacheServiceProvider extends ServiceProvider
 {

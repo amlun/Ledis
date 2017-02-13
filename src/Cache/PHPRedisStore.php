@@ -6,7 +6,7 @@
  * Time: 下午7:04
  */
 
-namespace Amlun\Cache;
+namespace Amlun\Ledis\Cache;
 
 use Amlun\Ledis\DataBase;
 use Illuminate\Contracts\Cache\Store;
